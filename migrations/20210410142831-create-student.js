@@ -17,6 +17,9 @@ module.exports = {
       lastName: {
         type: Sequelize.STRING
       },
+      groupName: {
+        type: Sequelize.STRING
+      },
       teamId: {
         type: Sequelize.STRING
       },

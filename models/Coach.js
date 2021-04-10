@@ -16,24 +16,27 @@ module.exports = (sequelize, DataTypes) => {
     Coach.init({
     id: {
       type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV1,
       require:true,
-      primaryKey: true,
-      defaultValue:UUIDV1
+      primaryKey: true
     },
     firstName: {
       type: DataTypes.STRING,
       require: true
     },
     lastName: {
+      type: DataTypes.STRING,
       require: true
     },
     middleName: {
       type: DataTypes.STRING,
       require: true
-  }},
+    },
+  },
   {
     sequelize,
-    modelName: 'Coach',
-  });
+    modelName: "Coach",
+  }
+);
   return Coach;
 };

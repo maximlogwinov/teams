@@ -17,13 +17,18 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV1,
-      require: true
+      require: true,
+      primaryKey: true
     },
     firstName: {
       type: DataTypes.STRING,
       require: true
     },
     lastName: {
+      type: DataTypes.STRING,
+      require: true
+    },
+    groupName: {
       type: DataTypes.STRING,
       require: true
     },
