@@ -1,10 +1,16 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "iwbzatlmxssrln",
+    "password": "995807a2f8c4dc0e35dec062095ece110cc921714d554826033006364db76055",
+    "database": "d7tg0omh5sljm6",
+    "host": "ec2-54-220-195-236.eu-west-1.compute.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
     "username": "root",
