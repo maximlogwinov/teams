@@ -11,12 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Project.associate = models => {
+        Project.belongsTo(models.Coach);
+      };
     }
   };
   Project.init({
     id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV1,
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
       require: true,
       primaryKey: true
     },
@@ -25,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       require: true
     },
     coachId: {
-      type: DataTypes.UUID,
+      type: DataTypes.INTEGER,
       references: {
         model: "Coach",
         key: "id"

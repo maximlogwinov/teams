@@ -11,12 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      
     }
   };
   Student.init({
     id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV1,
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
       require: true,
       primaryKey: true
     },
@@ -33,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
       require: true
     },
     teamId: {
-      type: DataTypes.UUID,
+      type: DataTypes.INTEGER,
       references: {
         model: "Team",
         key: "id"

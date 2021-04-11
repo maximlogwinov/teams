@@ -15,17 +15,17 @@ module.exports = (sequelize, DataTypes) => {
   };
   Team.init({
     id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV1,
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
       require: true,
-      primaryKey: true
     },
     name: {
       type: DataTypes.STRING,
       require: true
     },
     projectId: {
-      type: DataTypes.UUID,
+      type: DataTypes.INTEGER,
       references: {
         model: "Project",
         key: "id"

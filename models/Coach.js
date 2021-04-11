@@ -10,33 +10,27 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      Coach.associate = models => {
+        Coach.hasMany(models.Project, {
+          foreignKey: 'id'
+        });
+      };
       // define association here
     }
   }
-    Coach.init({
-    id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV1,
-      require:true,
-      primaryKey: true
-    },
+  Coach.init({
     firstName: {
       type: DataTypes.STRING,
-      require: true
     },
     lastName: {
       type: DataTypes.STRING,
-      require: true
     },
     middleName: {
-      type: DataTypes.STRING,
-      require: true
-    },
-  },
-  {
+      type: DataTypes.STRING
+    }
+  }, {
     sequelize,
-    modelName: "Coach",
-  }
-);
+    modelName: 'Coach',
+  });
   return Coach;
 };

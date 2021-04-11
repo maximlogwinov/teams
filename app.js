@@ -10,6 +10,11 @@ app.listen(3000 ,(req, res) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/team", require("./team/team.post.js"));
+app.use("/coach", require("./coach/coach.post.js"));
 app.use("/teams", require("./team/team.get.js"));
+app.use("/coach", require("./coach/coach.delete.js"));
+app.use("/project", require("./project/project.delete.js"));
+app.use("/project", require("./project/project.post.js"));
+app.use("/project", require("./project/project.get.js"));
 app.use("/team", require("./team/team.delete.js"));
+app.use("/team", require("./team/team.post.js"));

@@ -1,10 +1,10 @@
 const express = require("express");
 const Router = express.Router();
-const { Team } = require("../models");
+const { Project } = require("../models");
 
 const route = Router.delete("/delete/:id", 
   async (req, res) => {
-    const deletedTeam = await Team.destroy({where: {id: req.params.id}});
+    const deletedproject = await Project.destroy({where: {id: req.params.id}});
 
     res.send("удален");
 });
