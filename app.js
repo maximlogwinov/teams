@@ -18,3 +18,4 @@ app.use("/project", require("./project/project.post.js"));
 app.use("/project", require("./project/project.get.js"));
 app.use("/team", require("./team/team.delete.js"));
 app.use("/team", require("./team/team.post.js"));
+app.use("/student", require("./student/student.post.js"));

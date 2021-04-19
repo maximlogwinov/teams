@@ -10,8 +10,8 @@ const route = Router.get(
       where: {name: req.body.name}
     });
 
-    res.send(project.coachId);
+    res.send(project);
   }
 );
-
+  
 module.exports = route;
